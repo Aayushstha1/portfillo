@@ -1,67 +1,79 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <title> Aayush stha </title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Fontawesome CDN Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Aayush Portfolio page</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
 <body>
-  <!-- Move to up button -->
-  <div class="scroll-button">
-    <a href="#home"><i class="fas fa-arrow-up"></i></a>
-  </div>
-  <!-- navgaition menu -->
-  <nav>
-    <div class="navbar">
-      <div class="logo"><a href="#">Aayush.</a></div>
-      <ul class="menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <div class="cancel-btn">
-            <i class="fas fa-times"></i>
-          </div>
-      </ul>
-      <div class="media-icons">
-        <a href="https://www.facebook.com/profile.php?id=100090220013311"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
-        <a href="https://github.com/Aayushstha1"><i class="fab fa-github"></i></a>
-        <a href="https://www.instagram.com/gorkhasgaming/?hl=en"><i class="fab fa-instagram"></i></a>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <h1 class="logo me-auto me-lg-0"><a href="index.html" style="font-weight: bold;">Aayush</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links">
+        <a href="https://twitter.com/Chaudhary_Sasis" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.facebook.com/sasishchaudhary620" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/sasishchaudhary620/" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/sasis-kumar-chaudhary-96712323a/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+
+    </div>
+
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <div class="text">
+        <div class="text-one">Hello,</div>
+        <div class="text-two">I'm Aayush stha</div>
+        <div class="text-three">BCA Student</div>
+        <div class="text-four">From Nepal</div>
+      </div>
+      <div class="button">
+        <a href="#contact"><button>Hire Me</button></a>
       </div>
     </div>
-    <div class="menu-btn">
-      <i class="fas fa-bars"></i>
-    </div>
-  </nav>
-
-<!-- Home Section Start -->
- <section class="home" id="home">
-   <div class="home-content">
-     <div class="text">
-       <div class="text-one">Hello,</div>
-       <div class="text-two">I'm Aayush stha</div>
-       <div class="text-three">BCA Student</div>
-       <div class="text-four">From Nepal</div>
-     </div>
-     <div class="button">
-       <a href="#contact"><button>Hire Me</button></a>
-     </div>
-   </div>
- </section>
-
-<!-- About Section Start -->
+  </section><!-- End Hero -->
+  <!-- About Section Start -->
 <section class="about" id="about">
   <div class="content">
     <div class="title"><span>About Me</span></div>
  <div class="about-details">
     <div class="left">
-      <img src="img/aayush.jpg" alt="images">
+      <img src="aayush.jpg" alt="images">
     </div>
     <div class="right">
       <div class="topic">Deveploping Is My Passion</div>
@@ -74,149 +86,39 @@
   </div>
 </section>
 
-<!-- My Skill Section Start -->
-<!-- Section Tag and Other Div will same where we need to put same CSS -->
-<section class="skills" id="skills">
- <div class="content">
-   <div class="title"><span>My Skills</span></div>
-   <div class="skills-details">
-     <div class="text">
-       <div class="topic">Skills Reflects Our Knowledge</div>
-       <p></p>
-       <div class="experience">
-         <div class="num">4</div>
-         <div class="exp">Month Of <br> Experience</div>
-       </div>
-     </div>
-     <div class="boxes">
-       <div class="box">
-         <div class="topic">HTML</div>
-         <div class="per">70%</div>
-       </div>
-       <div class="box">
-         <div class="topic">C Language</div>
-         <div class="per">50%</div>
-       </div>
-       <div class="box">
-         <div class="topic">JavaScript</div>
-         <div class="per">45%</div>
-       </div>
-       <div class="box">
-         <div class="topic">Flutter</div>
-         <div class="per">10%</div>
-       </div>
-     </div>
-   </div>
- </div>
-</section>
 
-<!-- My Services Section Start -->
- <section class="services" id="services">
-   <div class="content">
-     <div class="title"><span>My Services</span></div>
-     <div class="boxes">
-       <div class="box">
-         <div class="icon">
-           <i class="fas fa-desktop"></i>
-       </div>
-       <div class="topic">Web Devlopment</div>
-       <p>Web development is the process of creating websites and web applications. It involves a wide range of skills and technologies, including HTML, CSS, JavaScript, and various web development frameworks.</p>
-     </div>
-       <!-- <div class="box">
-         <div class="icon">
-           <i class="fas fa-paint-brush"></i>
-       </div>
-       <div class="topic">Graphic Design</div>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem eligendi?</p>
-     </div>
-       <div class="box">
-         <div class="icon">
-           <i class="fas fa-chart-line"></i>
-       </div>
-       <div class="topic">Digital Marketing</div>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem eligendi?</p>
-     </div> -->
-       <!-- <div class="box">
-         <div class="icon">
-           <i class="fab fa-android"></i>
-       </div>
-       <div class="topic">Icon Design</div>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem eligendi?</p>
-     </div> -->
-       <div class="box">
-         <div class="icon">
-           <i class="fas fa-camera-retro"></i>
-       </div>
-       <div class="topic">Photography</div>
-       <p>Photography is the art of capturing images using a camera. It can be done for personal or professional purposes and can be a hobby or a career. There are many different types of photography, such as landscape, portrait, and action photography</p>
-     </div>
-       <div class="box">
-         <div class="icon">
-           <i class="fas fa-tablet-alt"></i>
-       </div>
-       <div class="topic">Apps Devlopment</div>
-       <p>Flutter is an open-source mobile application development framework created by Google. It is used to develop apps for iOS, Android, and the web. Flutter uses the Dart programming language and provides a reactive programming model for building mobile apps. </p>
-     </div>
-   </div>
-   </div>
- </section>
-
-  
-
-<!-- contact me section started -->
-<section class="contact" id="contact">
-  <div class="title"><span>Contact Me</span></div>
-  <div class="content">
-    <div class="left-side">
-      <div class="address details">
-        <i class="fas fa-map-marker-alt"></i>
-        <div class="topic">Address</div>
-        <div class="text--two">Jhapa</div>
-        <div class="text--two">Gauradaha-3, jhapa</div>
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Aayush</span></strong>. All Rights Reserved
       </div>
-      <div class="phone details">
-        <i class="fas fa-phone-alt"></i>
-        <div class="topic">Phone</div>
-        <!-- <div class="text-one"></div> -->
-        <div class="text--two">+977 9824099712</div>
-      </div>
-      <div class="email details">
-        <i class="fas fa-envelope"></i>
-        <div class="topic">Email</div>
-        <!-- <div class="text-one"></div> -->
-        <div class="text--two">aaysushstha500@gmail.com</div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/ -->
+        Designed by <a href="#">Aayush stha</a>
       </div>
     </div>
-    <div class="right-side">
-      <div class="topic-text">Message Me!</div>
-      <p>For the further details you can contact me from here by direct malling me or you can personally message me in instagram. </p>
-      <form action="#">
-        <div class="input-box">
-          <input type="text" placeholder="Enter your name" required>
-        </div>
-        <div class="input-box">
-          <input type="text" placeholder="Enter your email" required>
-        </div>
-        <div class="input-box message-box">
-          <textarea placeholder="Enter your message"></textarea>
-        </div>
-        <div class="button">
-          <input type="submit" value="Send Now">
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
+  </footer><!-- End  Footer -->
 
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
-<!-- Footer Section Start -->
-<footer>
-  <div class="text">
-    <span><a href="#">aayushstha1.com.np</a> | &#169; 2023 All Right Reserve</span>
-  </div>
-</footer>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 
-  <script src="script.js"></script>
 </body>
+
 </html>
