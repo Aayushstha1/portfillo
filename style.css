@@ -65,25 +65,4 @@
 .menu-bar ul li:hover .submenu-1 ul li a:hover{
 	color: aqua;
 }
-/* agriculture writting */
-.agriculture{
-	height: 60vh;
-	margin-top: 20%;
-	text-align: center;
-	display: block;
-	font-size: xx-large;
-	font-family: 'Times New Roman', Times, serif;
-	font-style: italic;
-	font-weight: 200;
-	font-weight: bolder;
-}
-/* Features second Page */
-.new-section{
-	/* height: 50vh; */
-	width: 100%;
-	margin: 0px;
-	background-color: rgb(127, 228, 69);
-}
-/* photo adjusting */
- 
 
