@@ -71,7 +71,7 @@ Web project designed to make tourist visits more informative and interactive wit
 
 ## 🌐 Live Demo
 
-Check out the live website: [Aayush Portfolio](https://your-username.github.io/portfolio/)  
+Check out the live website: [Aayush Portfolio](https://Aayushstha1.github.io/portfolio/)  
 
 *(Replace the link with your GitHub Pages URL)*
 
