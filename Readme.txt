@@ -82,8 +82,8 @@ Check out the live website: [Aayush Portfolio](https://your-username.github.io/p
 Feel free to connect with me:  
 
 - **Email**: your.email@example.com  
-- **LinkedIn**: [linkedin.com/in/your-profile](https://linkedin.com)  
-- **GitHub**: [github.com/Aayushstha1](https://github.com/Aayushstha1)
+- **LinkedIn**: https://www.linkedin.com/in/aayush-stha-0a97742b2/  
+- **GitHub**: (https://github.com/Aayushstha1)
 
 ---
 
