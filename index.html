@@ -4,117 +4,458 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Aayush Portfolio page</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <title>Aayush Portfolio</title>
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77);
+      color: #f1f5f9;
+      overflow-x: hidden;
+    }
+
+    /* ===== Header ===== */
+    #header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background: rgba(13, 27, 42, 0.9);
+      backdrop-filter: blur(10px);
+      transition: all 0.4s ease;
+      padding: 12px 0;
+    }
+
+    #header .logo a {
+      color: #00e5ff;
+      font-weight: 700;
+      font-size: 28px;
+      text-decoration: none;
+    }
+
+    #navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    #navbar a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    #navbar a:hover,
+    #navbar .active {
+      color: #00e5ff;
+    }
+
+    .header-social-links a {
+      color: #94a3b8;
+      margin-left: 10px;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+
+    .header-social-links a:hover {
+      color: #00e5ff;
+    }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 50%, rgba(0, 229, 255, 0.15), transparent 70%);
+      animation: pulse 6s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        opacity: 0.5;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0.5;
+      }
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      font-weight: 700;
+      color: #00e5ff;
+      margin-bottom: 15px;
+      text-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+      animation: fadeDown 1s ease-out;
+    }
+
+    @keyframes fadeDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .typing {
+      font-size: 28px;
+      color: #f8fafc;
+      border-right: 3px solid #00e5ff;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(30, end) 1s forwards, blink 0.8s infinite;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 330px;
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-top: 10px;
+      color: #cbd5e1;
+      max-width: 600px;
+    }
+
+    .hero .btn {
+      margin-top: 30px;
+      background: #00e5ff;
+      color: #0a0f1c;
+      padding: 10px 30px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .hero .btn:hover {
+      background: #0dcaf0;
+      transform: translateY(-3px);
+    }
+
+    /* ===== About Section ===== */
+    .about {
+      padding: 100px 0;
+      background: #16213e;
+    }
+
+    .about h2 {
+      color: #00e5ff;
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 50px;
+      font-weight: 700;
+    }
+
+    .about .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      text-align: left;
+    }
+
+    .about img {
+      width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 229, 255, 0.3);
+    }
+
+    .about-text {
+      max-width: 600px;
+    }
+
+    .about-text h3 {
+      color: #00e5ff;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .about-text p {
+      color: #e2e8f0;
+      line-height: 1.7;
+    }
+
+    /* ===== Skills Section ===== */
+    .skills {
+      padding: 100px 0;
+      background: #0f172a;
+      text-align: center;
+    }
+
+    .skills h2 {
+      color: #00e5ff;
+      font-size: 36px;
+      margin-bottom: 40px;
+      font-weight: 700;
+    }
+
+    .skill-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .skill {
+      background: #1e293b;
+      padding: 20px 30px;
+      border-radius: 15px;
+      color: #f8fafc;
+      font-weight: 500;
+      transition: 0.4s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 0 15px rgba(0, 229, 255, 0.1);
+    }
+
+    .skill i {
+      font-size: 24px;
+      color: #00e5ff;
+    }
+
+    .skill:hover {
+      transform: scale(1.08);
+      background: #00e5ff;
+      color: #0f172a;
+      box-shadow: 0 0 25px rgba(0, 229, 255, 0.5);
+    }
+
+    .skill:hover i {
+      color: #0f172a;
+    }
+
+    /* ===== Projects Section ===== */
+    .projects {
+      padding: 100px 0;
+      background: #16213e;
+      text-align: center;
+    }
+
+    .projects h2 {
+      color: #00e5ff;
+      font-size: 36px;
+      margin-bottom: 50px;
+      font-weight: 700;
+    }
+
+    .project-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      background: #1e293b;
+      width: 300px;
+      border-radius: 15px;
+      padding: 25px;
+      color: #f8fafc;
+      transition: 0.4s;
+      box-shadow: 0 0 20px rgba(0, 229, 255, 0.1);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      background: #0ea5e9;
+      color: white;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #0a0f1c;
+      text-align: center;
+      padding: 30px 0;
+      color: #94a3b8;
+    }
+
+    footer a {
+      color: #00e5ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .about .about-content {
+        flex-direction: column;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .typing {
+        font-size: 22px;
+      }
+    }
+  </style>
+
+  <!-- Font Awesome (for skill icons) -->
+  <script src="https://kit.fontawesome.com/a2d9a66f02.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.html" style="font-weight: bold;">Aayush</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
+  <!-- ===== Header ===== -->
+  <header id="header">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h1 class="logo"><a href="index.html">Aayush</a></h1>
+      <nav id="navbar">
         <ul>
           <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a class="active" href="about.html">About</a></li>
+          <li><a class="active" href="resume.html">Resume</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a  class = "active" href="contact.html">Contact</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+      </nav>
       <div class="header-social-links">
-        <a href="" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100090220013311" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/aayush.stha11/" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a href="#" class="bi bi-instagram"></a>
+        <a href="#" class="bi bi-linkedin"></a>
+        <a href="#" class="bi bi-github"></a>
       </div>
+    </div>
+  </header>
 
-    </div>
+  <!-- ===== Hero Section ===== -->
+  <section class="hero">
+    <h1>Hello, I'm <span style="color:#00e5ff;">Aayush Stha</span></h1>
+    <div class="typing">BCA Student | Developer | Learner</div>
+    <p>I'm passionate about creating modern, responsive, and user-friendly web and mobile applications using the latest technologies.</p>
+    <a href="#contact" class="btn">Hire Me</a>
+  </section>
 
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section class="home" id="home">
-    <div class="home-content">
-      <div class="text">
-        <div class="text-one">Hello,</div>
-        <div class="text-two">I'm Aayush stha</div>
-        <div class="text-three">BCA Student</div>
-        <div class="text-four">From Nepal</div>
-      </div>
-      <div class="button">
-        <a href="#contact"><button>Hire Meee</button></a>
-      </div>
-    </div>
-  </section><!-- End Hero -->
-  <!-- About Section Start -->
-<section class="about" id="about">
-  <div class="content">
-    <div class="title"><span>About Me</span></div>
- <div class="about-details">
-    <div class="left">
-      <img src="aayush.jpg" alt="images">
-    </div>
-    <div class="right">
-      <div class="topic">Deveploping Is My Passion</div>
-      <p>Hi! I am Aayush stha from jhapa, Nepal. I have recently completed my plus 2 education and am currently studying for my Bachelor's degree in Computer Application (BCA). Alongside my studies, I have been learning about Flutter cross-platform application development. I am passionate about technology and have been working on a project related to app development using flutter. I am excited to continue learning and growing in this field and hope to make a positive impact in the world of technology.</p>
-     <div class="button">
-        <a href=""><button>Download CV</button></a>
-      </div>
-    </div>
-  </div>
-  </div>
-</section>
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <!-- ===== About Section ===== -->
+  <section class="about" id="about" data-aos="fade-up">
     <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Aayush</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/ -->
-        Designed by <a href="#">Aayush stha</a>
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img src="aayush.jpg" alt="Aayush photo">
+        <div class="about-text">
+          <h3>Developer & Tech Enthusiast</h3>
+          <p>Hey! I’m Aayush Stha from Jhapa, Nepal. I’m pursuing my Bachelor’s degree in Computer Application (BCA). I enjoy solving problems and turning ideas into reality through code. Currently, I’m exploring Flutter, React, and backend technologies like Django and PHP. My goal is to build meaningful software that creates real-world impact.</p>
+        </div>
       </div>
     </div>
-  </footer><!-- End  Footer -->
+  </section>
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- ===== Skills Section ===== -->
+  <section class="skills" id="skills" data-aos="fade-up">
+    <div class="container">
+      <h2>Skills & Tools</h2>
+      <div class="skill-items">
+        <div class="skill"><i class="fab fa-html5"></i>HTML</div>
+        <div class="skill"><i class="fab fa-css3-alt"></i>CSS</div>
+        <div class="skill"><i class="fab fa-js"></i>JavaScript</div>
+        <div class="skill"><i class="fab fa-react"></i>ReactJS</div>
+        <div class="skill"><i class="fab fa-bootstrap"></i>Bootstrap</div>
+        <div class="skill"><i class="fab fa-php"></i>PHP</div>
+        <div class="skill"><i class="fab fa-python"></i>Python</div>
+        <div class="skill"><i class="fas fa-database"></i>MySQL</div>
+        <div class="skill"><i class="fab fa-java"></i>Java</div>
+        <div class="skill"><i class="fas fa-code"></i>C</div>
+        <div class="skill"><i class="fas fa-code"></i>C++</div>
+        <div class="skill"><i class="fas fa-code"></i>C#</div>
+        <div class="skill"><i class="fab fa-figma"></i>Figma</div>
+        <div class="skill"><i class="fab fa-canva"></i>Canva</div>
+        <div class="skill"><i class="fab fa-wordpress"></i>WordPress</div>
+        <div class="skill"><i class="fab fa-github"></i>GitHub</div>
+        <div class="skill"><i class="fab fa-flutter"></i>Flutter</div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
+  <!-- ===== Projects Section ===== -->
+  <section class="projects" id="projects" data-aos="fade-up">
+    <div class="container">
+      <h2>Recent Projects</h2>
+      <div class="project-cards">
+        <div class="card">
+          <h4>AgriMart</h4>
+          <p>A single-vendor agriculture e-commerce platform where farmers can sell and buy items with admin control.</p>
+        </div>
+        <div class="card">
+          <h4>Water Management System</h4>
+          <p>A system to manage water jar delivery, including admin, customer, and delivery dashboards.</p>
+        </div>
+        <div class="card">
+          <h4>Tourist Guider</h4>
+          <p>Web project designed to make tourist visits more informative and interactive with location-based guides.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer id="contact">
+    <p>&copy; 2025 <strong><a href="#">Aayush Stha</a></strong> | All Rights Reserved</p>
+    <p>Made with 💙 & Passion</p>
+  </footer>
+
+  <!-- JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 
 </html>
